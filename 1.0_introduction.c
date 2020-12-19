@@ -55,7 +55,7 @@
 **
 **
 **
-** Ahora nuestro programa para entender a los operadores de bitwise (siguientes explicaciones)
+** Ahora nuestro programa para entender a los operadores de bitwise
 **
 ** 1) Fijamos nuestro número entero en 3 (00000000 00000000 00000000 00000011)
 ** y nuestro char sin firmar a 46 (00101110);
@@ -64,28 +64,31 @@
 ** 11 se deslizará a la izquierda para convertirse en 110
 ** en el ejemplo 11 (3) se convierte en 110 (6)
 **
-** 3) DESPLAZAMIENTO DERECHO (>>) : el byte se divide ahora por 2, siendo el módulo
-** Perdido para siempre si teníamos 7 se convertirá en 3.
+** 3) DESPLAZAMIENTO DERECHO (>>) : el byte se divide ahora por 2, siendo el resto/módulo
+** perdido para siempre si teníamos 7 se convertirá en 3.
 **
 ** 4) Operador de Bitwise AND (&) : ahora usamos una máscara (&), con 1,
-** &= 1 es equivalente a %= 2; Por lo tanto, comprobaremos si el valor es impar.
+** &= 1 es equivalente a %= 2.
+** Por lo tanto, comprobaremos si el valor es impar.
 **
 ** 5) Operador de Bitwise OR (|) :
 ** añadimos 1 al número si era par (múltiplo de 2).
-** si ya era impar, nada cambiará.
+** Si ya era impar, nada cambiará.
 **
 ** 6) Operador de Bitwise AND (&) con compensación (~) :
 ** Ahora restamos 1 al número si era impar.
-** si ya era par, nada cambiará.
+** Si ya era par, nada cambiará.
 **
 ** 7) El operador Bitwise EXCLUSIVO O (^) : compara cada bit de su primer
 ** operando al bit correspondiente de su segundo operando.
 ** Si un bit es 0 y el otro bit es 1, el bit de resultado correspondiente
-** El número de la palabra "no" está fijado en 1. En caso contrario, el bit de resultado correspondiente se pone a 0.
-** en resumen: se convertirá en 1 si los bits son opuestos y en 0 si no.
+** El número de la palabra "no" está fijado en 1. En caso contrario, el bit de
+** resultado correspondiente se pone a 0.
+** En resumen: se convertirá en 1 si los bits son opuestos y en 0 si no.
 ** 00101110 = 00101110 ^ 11010000 dará 11111110
 **
-** Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
+** Traducción realizada con la versión gratuita del
+** traductor www.DeepL.com/Translator
 */
 
 int			main(int ac, char **av)
